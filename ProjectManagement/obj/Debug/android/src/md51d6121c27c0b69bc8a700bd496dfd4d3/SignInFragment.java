@@ -2,7 +2,7 @@ package md51d6121c27c0b69bc8a700bd496dfd4d3;
 
 
 public class SignInFragment
-	extends android.app.Fragment
+	extends md51d6121c27c0b69bc8a700bd496dfd4d3.BaseFragment
 	implements
 		mono.android.IGCUserPeer
 {

@@ -72,9 +72,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Adapters\ProjectsAdapter.cs" />
+    <Compile Include="Fragments\BaseFragment.cs" />
     <Compile Include="Fragments\ProjectDetailsFragment.cs" />
     <Compile Include="Fragments\ProjectsFragment.cs" />
     <Compile Include="Fragments\SignInFragment.cs" />
+    <Compile Include="ProjectDetails.cs" />
+    <Compile Include="Projects.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,7 @@
     <AndroidResource Include="Resources\layout\project_details.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\list_Item.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -111,7 +116,9 @@
     <AndroidResource Include="Resources\drawable\ic_home_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\ic_question_answer_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\ic_supervisor_account_black_24dp.png" />
-    <AndroidResource Include="Resources\layout\projects.axml" />
+    <AndroidResource Include="Resources\layout\projects.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\menu\navmenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -137,6 +144,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\imgBg.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagement.Core\ProjectManagement.Core.csproj">
+      <Project>{d7c5fa01-48d9-4c54-b0d6-9d7e506dbfb0}</Project>
+      <Name>ProjectManagement.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

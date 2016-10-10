@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  <group android:checkableBehavior="single">  
-    <item
-      android:id="@+id/nav_Logout"
-      android:icon="@drawable/ic_question_answer_black_24dp"
-      android:title="Logout" />
+  <group android:checkableBehavior="single">    
     <item
       android:id="@+id/nav_Projects"
-      android:icon="@drawable/ic_supervisor_account_black_24dp"
       android:title="View Projects" />
+    <item
+    android:id="@+id/nav_Logout"
+    android:title="Logout" />
   </group> 
 </menu>

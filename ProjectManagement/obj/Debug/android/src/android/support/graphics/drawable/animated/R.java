@@ -2322,6 +2322,8 @@ containing a value of this type.
         public static int disableHome=0x7f07000e;
         public static int drawer_layout=0x7f070073;
         public static int edit_query=0x7f07005c;
+        public static int edt_signin_password=0x7f070085;
+        public static int edt_signin_username=0x7f070084;
         public static int end=0x7f07001c;
         public static int end_padder=0x7f070083;
         public static int enterAlways=0x7f070023;
@@ -2339,8 +2341,6 @@ containing a value of this type.
         public static int ifRoom=0x7f070020;
         public static int image=0x7f07003f;
         public static int info=0x7f070082;
-        public static int input_email=0x7f070084;
-        public static int input_password=0x7f070085;
         public static int item_touch_helper_previous_elevation=0x7f070000;
         public static int layout_main=0x7f070074;
         public static int left=0x7f07002f;

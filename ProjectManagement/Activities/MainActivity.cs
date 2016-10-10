@@ -8,6 +8,8 @@ using Android.Views;
 using Android.App;
 using System;
 using ProjectManagement.Fragments;
+using Android.Views.InputMethods;
+using Android.Content;
 
 namespace ProjectManagement
 {
@@ -24,8 +26,7 @@ namespace ProjectManagement
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Main);
-
+            SetContentView(Resource.Layout.Main);         
             InitDrawer();
         }
 
@@ -40,7 +41,6 @@ namespace ProjectManagement
             MenuInflater.Inflate(Resource.Menu.action_menu, menu);
             if (menu != null)
             {
-                menu.FindItem(Resource.Id.action_refresh).SetVisible(true);
                 menu.FindItem(Resource.Id.action_attach).SetVisible(false);
             }
             return base.OnCreateOptionsMenu(menu);
