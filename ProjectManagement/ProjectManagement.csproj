@@ -77,8 +77,6 @@
     <Compile Include="Fragments\ProjectDetailsFragment.cs" />
     <Compile Include="Fragments\ProjectsFragment.cs" />
     <Compile Include="Fragments\SignInFragment.cs" />
-    <Compile Include="ProjectDetails.cs" />
-    <Compile Include="Projects.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

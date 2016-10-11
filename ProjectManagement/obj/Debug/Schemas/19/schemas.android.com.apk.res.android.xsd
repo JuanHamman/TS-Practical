@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v19</xs:documentation>
-    <xs:documentation>11/10/2016 00:22:22</xs:documentation>
+    <xs:documentation>11/10/2016 22:42:25</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -19713,6 +19713,33 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="layout_gravity">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="bottom" />
+            <xs:enumeration value="center" />
+            <xs:enumeration value="center_horizontal" />
+            <xs:enumeration value="center_vertical" />
+            <xs:enumeration value="clip_horizontal" />
+            <xs:enumeration value="clip_vertical" />
+            <xs:enumeration value="end" />
+            <xs:enumeration value="fill" />
+            <xs:enumeration value="fill_horizontal" />
+            <xs:enumeration value="fill_vertical" />
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="start" />
+            <xs:enumeration value="top" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="layout_height">
     <xs:annotation>
       <xs:documentation>Specifies the basic height of the view. This is a required attribute for any view inside of a containing layout manager. Its value may be a dimension (such as "12dip") for a constant height or one of the special constants.</xs:documentation>
@@ -19857,6 +19884,1040 @@
             <xs:enumeration value="?android:attr/textUnderlineThickness" />
             <xs:enumeration value="?android:attr/windowTitleSize" />
           </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_margin">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the left, top, right and bottom sides of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginBottom">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the bottom side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginEnd">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the end side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginLeft">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the left side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginRight">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the right side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginStart">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the start side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_marginTop">
+    <xs:annotation>
+      <xs:documentation>Specifies extra space on the top side of this view. This space is outside this view's bounds.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="@dimen/abc_action_bar_content_inset_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_height_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_default_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_icon_vertical_padding_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_overflow_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_progress_bar_size" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_max_height" />
+            <xs:enumeration value="@dimen/abc_action_bar_stacked_tab_max_width" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_bar_subtitle_top_margin_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_height_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_material" />
+            <xs:enumeration value="@dimen/abc_action_button_min_width_overflow_material" />
+            <xs:enumeration value="@dimen/abc_alert_dialog_button_bar_height" />
+            <xs:enumeration value="@dimen/abc_button_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_inset_vertical_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_button_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_config_prefDialogWidth" />
+            <xs:enumeration value="@dimen/abc_control_corner_material" />
+            <xs:enumeration value="@dimen/abc_control_inset_material" />
+            <xs:enumeration value="@dimen/abc_control_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_height_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_fixed_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_list_padding_vertical_material" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_major" />
+            <xs:enumeration value="@dimen/abc_dialog_min_width_minor" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_material" />
+            <xs:enumeration value="@dimen/abc_dialog_padding_top_material" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/abc_disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_icon_width" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_left" />
+            <xs:enumeration value="@dimen/abc_dropdownitem_text_padding_right" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_bottom_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_edit_text_inset_top_material" />
+            <xs:enumeration value="@dimen/abc_floating_window_z" />
+            <xs:enumeration value="@dimen/abc_list_item_padding_horizontal_material" />
+            <xs:enumeration value="@dimen/abc_panel_menu_list_width" />
+            <xs:enumeration value="@dimen/abc_search_view_preferred_width" />
+            <xs:enumeration value="@dimen/abc_search_view_text_min_width" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_background_height_material" />
+            <xs:enumeration value="@dimen/abc_seekbar_track_progress_height_material" />
+            <xs:enumeration value="@dimen/abc_select_dialog_padding_start_material" />
+            <xs:enumeration value="@dimen/abc_switch_padding" />
+            <xs:enumeration value="@dimen/abc_text_size_body_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_body_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_button_material" />
+            <xs:enumeration value="@dimen/abc_text_size_caption_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_1_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_2_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_3_material" />
+            <xs:enumeration value="@dimen/abc_text_size_display_4_material" />
+            <xs:enumeration value="@dimen/abc_text_size_headline_material" />
+            <xs:enumeration value="@dimen/abc_text_size_large_material" />
+            <xs:enumeration value="@dimen/abc_text_size_medium_material" />
+            <xs:enumeration value="@dimen/abc_text_size_menu_material" />
+            <xs:enumeration value="@dimen/abc_text_size_small_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subhead_material" />
+            <xs:enumeration value="@dimen/abc_text_size_subtitle_material_toolbar" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material" />
+            <xs:enumeration value="@dimen/abc_text_size_title_material_toolbar" />
+            <xs:enumeration value="@dimen/design_appbar_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_elevation" />
+            <xs:enumeration value="@dimen/design_bottom_sheet_modal_peek_height" />
+            <xs:enumeration value="@dimen/design_fab_border_width" />
+            <xs:enumeration value="@dimen/design_fab_elevation" />
+            <xs:enumeration value="@dimen/design_fab_image_size" />
+            <xs:enumeration value="@dimen/design_fab_size_mini" />
+            <xs:enumeration value="@dimen/design_fab_size_normal" />
+            <xs:enumeration value="@dimen/design_fab_translation_z_pressed" />
+            <xs:enumeration value="@dimen/design_navigation_elevation" />
+            <xs:enumeration value="@dimen/design_navigation_icon_padding" />
+            <xs:enumeration value="@dimen/design_navigation_icon_size" />
+            <xs:enumeration value="@dimen/design_navigation_max_width" />
+            <xs:enumeration value="@dimen/design_navigation_padding_bottom" />
+            <xs:enumeration value="@dimen/design_navigation_separator_vertical_padding" />
+            <xs:enumeration value="@dimen/design_snackbar_action_inline_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_background_corner_radius" />
+            <xs:enumeration value="@dimen/design_snackbar_elevation" />
+            <xs:enumeration value="@dimen/design_snackbar_extra_spacing_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_max_width" />
+            <xs:enumeration value="@dimen/design_snackbar_min_width" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_horizontal" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical" />
+            <xs:enumeration value="@dimen/design_snackbar_padding_vertical_2lines" />
+            <xs:enumeration value="@dimen/design_snackbar_text_size" />
+            <xs:enumeration value="@dimen/design_tab_max_width" />
+            <xs:enumeration value="@dimen/design_tab_scrollable_min_width" />
+            <xs:enumeration value="@dimen/design_tab_text_size" />
+            <xs:enumeration value="@dimen/design_tab_text_size_2line" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_dark" />
+            <xs:enumeration value="@dimen/disabled_alpha_material_light" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_colored" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_dark" />
+            <xs:enumeration value="@dimen/highlight_alpha_material_light" />
+            <xs:enumeration value="@dimen/item_touch_helper_max_drag_scroll_per_frame" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_max_velocity" />
+            <xs:enumeration value="@dimen/item_touch_helper_swipe_escape_velocity" />
+            <xs:enumeration value="@dimen/notification_large_icon_height" />
+            <xs:enumeration value="@dimen/notification_large_icon_width" />
+            <xs:enumeration value="@dimen/notification_subtext_size" />
+            <xs:enumeration value="@android:dimen/app_icon_size" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_major" />
+            <xs:enumeration value="@android:dimen/dialog_min_width_minor" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_height" />
+            <xs:enumeration value="@android:dimen/notification_large_icon_width" />
+            <xs:enumeration value="@android:dimen/thumbnail_height" />
+            <xs:enumeration value="@android:dimen/thumbnail_width" />
+            <xs:enumeration value="?android:attr/actionBarSize" />
+            <xs:enumeration value="?android:attr/dropdownListPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredChildPaddingLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorLeft" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemIndicatorRight" />
+            <xs:enumeration value="?android:attr/expandableListPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeight" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightLarge" />
+            <xs:enumeration value="?android:attr/listPreferredItemHeightSmall" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingEnd" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingLeft" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingRight" />
+            <xs:enumeration value="?android:attr/listPreferredItemPaddingStart" />
+            <xs:enumeration value="?android:attr/panelMenuListWidth" />
+            <xs:enumeration value="?android:attr/preferenceFragmentPaddingSide" />
+            <xs:enumeration value="?android:attr/textUnderlineThickness" />
+            <xs:enumeration value="?android:attr/windowTitleSize" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="layout_weight">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
         </xs:simpleType>
       </xs:union>
     </xs:simpleType>

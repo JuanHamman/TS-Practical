@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using ProjectManagement.Core.Commons;
 
 namespace ProjectManagement.Fragments
 {
@@ -54,7 +55,15 @@ namespace ProjectManagement.Fragments
 
         private void PopulateProjectDetails()
         {
-            
+            EditText edtTitle = View.FindViewById<EditText>(Resource.Id.edit_projectdetails_title);
+            EditText edtDescription = View.FindViewById<EditText>(Resource.Id.edit_projectdetails_description);
+
+            if (ProjectManagementCommons.Instance.project != null)
+            {                
+                edtTitle.Text = ProjectManagementCommons.Instance.project.Title;
+                edtDescription.Text = ProjectManagementCommons.Instance.project.Description;
+            }
+
         }
         #endregion
 

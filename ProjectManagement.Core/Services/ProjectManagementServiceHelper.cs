@@ -15,9 +15,9 @@ namespace ProjectManagement.Core.Services
             return res.token;
         }
 
-        public static async Task GetProjects(string token)
+        public static async Task<List<Project>> GetProjects(string token)
         {
-            var res = await DoGet<AuthenticateRequest>(null, ServiceURLs.ProjectURL, token);
+            return await DoGet<List<Project>>(null, ServiceURLs.ProjectURL, token);
         }
     }
 }

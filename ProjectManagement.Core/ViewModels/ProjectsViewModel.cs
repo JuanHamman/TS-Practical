@@ -15,9 +15,17 @@ namespace ProjectManagement.Core.ViewModels
         {
         }
 
-        public async Task GetProjects()
+        public async Task<List<Project>> GetProjects()
         {
-            await ProjectManagementServiceHelper.GetProjects(ProjectManagementSettings.Instance.Token);
+            try
+            {
+                return await ProjectManagementServiceHelper.GetProjects(ProjectManagementSettings.Instance.Token);
+            }
+            catch (Exception e)
+            {
+                throw e; 
+                //Add better error handling
+            }
         }
     }
 }

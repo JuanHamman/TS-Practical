@@ -14,6 +14,8 @@ using ProjectManagement;
 using ProjectManagement.Core.ViewModels;
 using ProjectManagement.Adapters;
 using Android.Views.InputMethods;
+using ProjectManagement.Core;
+using ProjectManagement.Core.Commons;
 
 namespace ProjectManagement.Fragments
 {
@@ -36,7 +38,7 @@ namespace ProjectManagement.Fragments
             base.OnViewCreated(view, savedInstanceState);
             ((MainActivity)this.Activity).UnlockMenu();
             //GetProjects(); //Getting the list trough the web service 
-            PopulateList();
+            GetProjects();
 
             InputMethodManager imm = (InputMethodManager)Activity.GetSystemService(Context.InputMethodService);
             imm.HideSoftInputFromWindow(View.WindowToken, 0);
@@ -50,34 +52,35 @@ namespace ProjectManagement.Fragments
         #endregion
 
         #region Methods
-        private void PopulateList()
-        {
-            projectsAdapter = new ProjectsAdapter(this.Activity, GetItems());
-
-            ListView listView = View.FindViewById<ListView>(Resource.Id.lv_projects);
-
-            listView.ItemClick += listView_ItemClick;
-            listView.Adapter = projectsAdapter;
-        }
-
-        private List<Projects> GetItems()
-        {
-            List<Projects> projectList = new List<Projects>();
-            projectList.Add(new Projects() { ProjectName = "Juan's company" });
-            projectList.Add(new Projects() { ProjectName = "Wiehan's company" });
-            projectList.Add(new Projects() { ProjectName = "Liep's company" });
-            projectList.Add(new Projects() { ProjectName = "Louis company" });
-            return projectList;
-        }
 
         internal override void InitViewModel()
         {
-            _vm = new ProjectsViewModel(this);
-        }
+            _vm = new ProjectsViewModel(this);            
+;        }
 
         private async void GetProjects()
         {
-            await _vm.GetProjects();
+            try
+            {
+                List<Project> projectList = await _vm.GetProjects();
+
+                //Set up adapter and stuff here
+                projectsAdapter = new ProjectsAdapter(this.Activity, projectList);
+
+                ListView listView = View.FindViewById<ListView>(Resource.Id.lv_projects);
+
+                listView.ItemClick += listView_ItemClick;
+                listView.Adapter = projectsAdapter;
+            }
+            catch (Exception e)
+            {
+                //Show exception message here
+                Console.WriteLine("Exception occured. Reason:" + e.Message);
+            }
+        }
+        private void SetProjectDetails()
+        {
+        
         }
         #endregion
 
@@ -85,10 +88,20 @@ namespace ProjectManagement.Fragments
         private void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             //Navigate to the clicked project to view details
+            if (projectsAdapter != null)
+            {
+                ProjectManagementCommons.Instance.project.ProjectID = projectsAdapter[e.Position].ProjectID;
+                ProjectManagementCommons.Instance.project.Title = projectsAdapter[e.Position].Title;
+                ProjectManagementCommons.Instance.project.Description = projectsAdapter[e.Position].Description;
+
+            }
+
             var ft = FragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.HomeFrameLayout, new ProjectDetailsFragment());
             ft.Commit();
         }
+
+       
         #endregion
     }
 }
