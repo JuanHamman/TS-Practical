@@ -16,6 +16,7 @@ using ProjectManagement.Adapters;
 using Android.Views.InputMethods;
 using ProjectManagement.Core;
 using ProjectManagement.Core.Commons;
+using Android.Support.Design.Widget;
 
 namespace ProjectManagement.Fragments
 {
@@ -34,16 +35,18 @@ namespace ProjectManagement.Fragments
 
         public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
-
             base.OnViewCreated(view, savedInstanceState);
             ((MainActivity)this.Activity).UnlockMenu();
-            //GetProjects(); //Getting the list trough the web service 
             GetProjects();
 
             InputMethodManager imm = (InputMethodManager)Activity.GetSystemService(Context.InputMethodService);
             imm.HideSoftInputFromWindow(View.WindowToken, 0);
+
+            FloatingActionButton fabAdd = View.FindViewById<FloatingActionButton>(Resource.Id.fab_Projects_add);
+            fabAdd.Click += FabAdd_Click;
         }
 
+     
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -78,10 +81,6 @@ namespace ProjectManagement.Fragments
                 Console.WriteLine("Exception occured. Reason:" + e.Message);
             }
         }
-        private void SetProjectDetails()
-        {
-        
-        }
         #endregion
 
         #region Events
@@ -90,18 +89,24 @@ namespace ProjectManagement.Fragments
             //Navigate to the clicked project to view details
             if (projectsAdapter != null)
             {
-                ProjectManagementCommons.Instance.project.ProjectID = projectsAdapter[e.Position].ProjectID;
-                ProjectManagementCommons.Instance.project.Title = projectsAdapter[e.Position].Title;
-                ProjectManagementCommons.Instance.project.Description = projectsAdapter[e.Position].Description;
+                Project p = projectsAdapter[e.Position];
+                ProjectDetailsFragment pf = new ProjectDetailsFragment();
+                pf.SelectedProject = p;
 
+                var ft = FragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.HomeFrameLayout, pf);
+                ft.Commit();
             }
+        }
+
+        private void FabAdd_Click(object sender, EventArgs e)
+        {
 
             var ft = FragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.HomeFrameLayout, new ProjectDetailsFragment());
             ft.Commit();
         }
 
-       
         #endregion
     }
 }

@@ -16,14 +16,17 @@ namespace ProjectManagement.Core.ViewModels
         {
             try
             {
+                if (string.IsNullOrEmpty(username))
+                    throw new Exception("Username can not be empty.");
                 ShowProgress();
                 string token = await ProjectManagementServiceHelper.Authenticate(username, password);
                 ProjectManagementSettings.Instance.Token = token;
                 HideProgress();
             }
-            catch (Exception e)
-            {
+            catch (Exception)
+            {                
                 HideProgress();
+                throw;
             }
         }
     }

@@ -11,16 +11,18 @@ using ProjectManagement.Fragments;
 using Android.Views.InputMethods;
 using Android.Content;
 
+//This is the Practical assignment of Juan Hamman for Tangent Solutions.
+
 namespace ProjectManagement
 {
-	[Activity (Label = "Project Management", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity (Label = "Project Management", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
-	{ 
+	{
 
-
-
-		private DrawerLayout drawerLayout;
+        #region Variables
+        private DrawerLayout drawerLayout;
         private ActionBarDrawerToggle drawerToggle;
+        #endregion
 
         #region Overrides
         protected override void OnCreate(Bundle savedInstanceState)
@@ -34,43 +36,19 @@ namespace ProjectManagement
         {
             SupportActionBar.SetTitle(Resource.String.app_name);
             base.OnResume();
-        }
-
-        public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.action_menu, menu);
-            if (menu != null)
-            {
-                menu.FindItem(Resource.Id.action_attach).SetVisible(false);
-            }
-            return base.OnCreateOptionsMenu(menu);
-        }
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            switch (item.ItemId)
-            {
-                case Android.Resource.Id.Home:
-                    //this.Activity.Finish();
-                    return true;
-                case Resource.Id.action_attach:
-                    //FnAttachImage();
-                    return true;
-                default:
-                    return base.OnOptionsItemSelected(item);
-            }
-        }
-        //to avoid direct app exit on backpreesed and to show fragment from stack
+        }   
         public override void OnBackPressed()
         {
             if (FragmentManager.BackStackEntryCount != 0)
             {
-                FragmentManager.PopBackStack();// fragmentManager.popBackStack();
+                FragmentManager.PopBackStack();
             }
             else {
                 base.OnBackPressed();
             }
         }
         #endregion
+
         #region Methods
         private void InitDrawer()
         {
@@ -112,7 +90,7 @@ namespace ProjectManagement
             }
             catch (Exception e)
             {
-                System.Console.WriteLine("An exception occured while locking the menu - " + e.StackTrace);
+                Console.WriteLine("An exception occured while locking the menu - " + e.StackTrace);
             }
         }
 

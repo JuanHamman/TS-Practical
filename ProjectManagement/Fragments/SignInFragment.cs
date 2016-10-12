@@ -32,6 +32,7 @@ namespace ProjectManagement.Fragments
         private EditText edtUsername, edtPassword;
         #endregion
 
+        #region Overrides
         public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
             base.OnViewCreated(view, savedInstanceState);
@@ -42,17 +43,18 @@ namespace ProjectManagement.Fragments
             InitView();
         }
 
-       
+
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-             return inflater.Inflate(Resource.Layout.sign_in, container, false);
+            return inflater.Inflate(Resource.Layout.sign_in, container, false);
         }
 
         internal override void InitViewModel()
         {
             _vm = new SignInViewModel(this);
         }
+        #endregion
 
         #region Methods
         private void InitView()
@@ -66,14 +68,21 @@ namespace ProjectManagement.Fragments
 
         private async void SignIn()
         {
-            await _vm.SignIn(edtUsername.Text, edtPassword.Text);
+            try
+            {
+                await _vm.SignIn(edtUsername.Text, edtPassword.Text);
 
-            var ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.HomeFrameLayout, new ProjectsFragment());
-            ft.Commit();
+                var ft = FragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.HomeFrameLayout, new ProjectsFragment());
+                ft.Commit();
+            }
+            catch(Exception e)
+            {
+                ShowErrorMessage(e.Message);
+            }
+           
         }
         #endregion
-
 
         #region Click Events
 
@@ -86,7 +95,6 @@ namespace ProjectManagement.Fragments
 
         }
         #endregion
-
 
     }
 }

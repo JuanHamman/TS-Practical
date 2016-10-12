@@ -4,6 +4,8 @@ using Android.App;
 using Android.OS;
 using Android.Views;
 using ProjectManagement.Core.Listeners;
+using Android.Views.InputMethods;
+using Android.InputMethodServices;
 
 namespace ProjectManagement.Fragments
 {
@@ -29,11 +31,45 @@ namespace ProjectManagement.Fragments
 
         #endregion
 
+        #region Methods
         internal abstract void InitViewModel();
 
         public void UpdateProgress(bool isBusy)
         {
-           
+            //TODO: implement global progress controls
+            View content = Activity.FindViewById(Resource.Id.HomeFrameLayout);
+            View progress = Activity.FindViewById(Resource.Id.progress);
+            if (content != null && progress != null)
+            {
+                Activity.RunOnUiThread(() =>
+                {
+                    IsBusy = isBusy;
+                    if (isBusy)
+                    {
+                        content.Visibility = ViewStates.Gone;
+                        progress.Visibility = ViewStates.Visible;
+                        InputMethodManager imm = (InputMethodManager)Activity.GetSystemService(Activity.InputMethodService);
+                        imm.HideSoftInputFromWindow(content.WindowToken, HideSoftInputFlags.None);
+                    }
+                    else
+                    {
+                        content.Visibility = ViewStates.Visible;
+                        progress.Visibility = ViewStates.Gone;
+                    }
+                });
+            }
         }
+
+        internal void ShowErrorMessage(string message)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(Activity);
+            builder.SetTitle("Oops...");
+            builder.SetMessage(message);
+            builder.SetPositiveButton("OK", (s, e) => { });
+            builder.SetCancelable(false);
+            builder.Create().Show();
+
+        }
+        #endregion
     }
 }

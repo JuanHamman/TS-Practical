@@ -2,9 +2,9 @@ C:\TS_Practical\ProjectManagement.Core\bin\Debug\ProjectManagement.Core.dll
 C:\TS_Practical\ProjectManagement.Core\bin\Debug\ProjectManagement.Core.pdb
 C:\TS_Practical\ProjectManagement.Core\bin\Debug\Newtonsoft.Json.dll
 C:\TS_Practical\ProjectManagement.Core\bin\Debug\Newtonsoft.Json.xml
-C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.csprojResolveAssemblyReference.cache
 C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.dll
 C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.pdb
+C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.csprojResolveAssemblyReference.cache
 C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.dll.mdb
 C:\TS_Practical\ProjectManagement.Core\bin\Debug\ProjectManagement.Core.dll.mdb
 C:\TS_Practical\ProjectManagement.Core\obj\Debug\ProjectManagement.Core.dll.mdb

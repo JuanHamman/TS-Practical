@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ProjectManagement.Core.Listeners;
 using ProjectManagement.Core.Services;
 using ProjectManagement.Core.Settings;
+using ProjectManagement.Core.DTO;
 
 namespace ProjectManagement.Core.ViewModels
 {
@@ -19,7 +20,7 @@ namespace ProjectManagement.Core.ViewModels
         {
             try
             {
-                return await ProjectManagementServiceHelper.GetProjects(ProjectManagementSettings.Instance.Token);
+             return await ProjectManagementServiceHelper.GetProjects(ProjectManagementSettings.Instance.Token);              
             }
             catch (Exception e)
             {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.suchith.navigation.ProjectManagement">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.suchith.navigation.ProjectManagement" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:allowBackup="true" android:theme="@style/MyTheme" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
-    <activity android:icon="@mipmap/icon" android:label="Project Management" android:name="md5aa448e1f57a7eea8d0b3b7a2ff6f30dd.MainActivity">
+  <application android:allowBackup="true" android:theme="@style/MyTheme" android:icon="@drawable/logo" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="Project Management" android:name="md5aa448e1f57a7eea8d0b3b7a2ff6f30dd.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

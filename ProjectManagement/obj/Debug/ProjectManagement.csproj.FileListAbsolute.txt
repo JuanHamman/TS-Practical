@@ -80,13 +80,9 @@ C:\TS_Practical\ProjectManagement\obj\Debug\ProjectManagement.pdb
 C:\TS_Practical\ProjectManagement\obj\Debug\android\bin\com.suchith.navigation.ProjectManagement.apk
 C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\sign_in.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\project_details.xml
+C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\list_item.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\main.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\res\values\strings.xml
-C:\TS_Practical\ProjectManagement\obj\Debug\res\mipmap-hdpi\icon.png
-C:\TS_Practical\ProjectManagement\obj\Debug\res\mipmap-mdpi\icon.png
-C:\TS_Practical\ProjectManagement\obj\Debug\res\mipmap-xhdpi\icon.png
-C:\TS_Practical\ProjectManagement\obj\Debug\res\mipmap-xxhdpi\icon.png
-C:\TS_Practical\ProjectManagement\obj\Debug\res\mipmap-xxxhdpi\icon.png
 C:\TS_Practical\ProjectManagement\obj\Debug\res\values\styles.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\res\values-v21\styles.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\headerdrawerlayout.xml
@@ -104,6 +100,9 @@ C:\TS_Practical\ProjectManagement\obj\Debug\res\drawable\logo.png
 C:\TS_Practical\ProjectManagement\obj\Debug\res\drawable\imgbg.jpg
 C:\TS_Practical\ProjectManagement\obj\Debug\R.cs.flag
 C:\TS_Practical\ProjectManagement\obj\Debug\uploadflags.txt
+C:\TS_Practical\ProjectManagement\obj\Debug\res\drawable\icon_trashbin.png
+C:\TS_Practical\ProjectManagement\obj\Debug\res\drawable\ic_add.png
+C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\progress.xml
 C:\TS_Practical\ProjectManagement\bin\Debug\ProjectManagement.dll.mdb
 C:\TS_Practical\ProjectManagement\bin\Debug\ProjectManagement.Core.dll.mdb
 C:\TS_Practical\ProjectManagement\bin\Debug\Java.Interop.dll.mdb
@@ -134,6 +133,5 @@ C:\TS_Practical\ProjectManagement\obj\Debug\android\assets\System.Runtime.Serial
 C:\TS_Practical\ProjectManagement\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\TS_Practical\ProjectManagement\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\TS_Practical\ProjectManagement\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\TS_Practical\ProjectManagement\obj\Debug\res\layout\list_item.xml
 C:\TS_Practical\ProjectManagement\obj\Debug\ProjectManagement.dll.mdb
 C:\TS_Practical\ProjectManagement\bin\Debug\ProjectManagement.dll.mdb
